@@ -1,0 +1,28 @@
+/*=================================
+=            Variables            =
+=================================*/
+
+/*----------  Colors  ----------*/
+/*Branding color*/
+
+$brand : #e57373;
+$bg-left : #212d34;
+$bg-right: #263238;
+
+/* Black and white redefine */
+
+$white : #cfd8dc;
+$black : #1e1e1e;
+
+/*----------  Typography  ----------*/
+
+$base-font-size : 16px;
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Fanwood+Text:400,400italic);
+
+$sans-serif : 'Open Sans', sans-serif;
+$serif : 'Fanwood', serif;
+
+$heading : $serif;
+$paragrah : $sans-serif;
+/*=====  End of Variables  ======*/

@@ -1,3 +1,78 @@
 /*
-   MINIMAL by @sudhq
+   Small Stuff
 */
+@import "normalize";
+@import "vars";
+@import "queries";
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $white;
+    color: $bg-left;
+    font: $base-font-size $sans-serif;
+    text-align: center;
+    text-rendering: geometricPrecision;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+/*----------  TYPE  ----------*/
+
+h1 {
+    font-size: 2rem;
+    color: $white;
+    font-family: $serif;
+}
+
+p a {
+    color: $brand;
+    font-family: $sans-serif;
+    font-style: italic;
+    text-decoration: none;
+    border-bottom: 1px solid $brand;
+    padding-bottom: 0.15rem;
+}
+
+/* =============================================================================
+  Layout
+  ============================================================================ */
+header {
+    height: 92vh;
+    width: 100%;
+    background-image: linear-gradient(to right, $bg-left, $bg-right);
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+    z-index: 2;
+    .container {
+        margin: 0 auto;
+        max-width: 80vw;
+        padding: 10rem 1.25rem;
+    }
+    h1.baseline {
+        letter-spacing: 0.2rem;
+        font-weight: bold;
+        font-style: italic;
+        width: 55%;
+        font-size: 2rem;
+        font-size: calc(1rem + 1vw);
+        line-height: 1.4;
+        font-weight: 400;
+        margin: 0 auto;
+    }
+}
+
+.social, .about, .work {
+    max-width: 80rem;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 2rem;
+}
