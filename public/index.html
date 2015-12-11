@@ -3,16 +3,99 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Minimal</title>
-    <meta name="description" content="Minimal boilerplate to start a responsive html5/sass project.">
-    <meta name="author" content="upside down">
+    <title>Akashrine | Brand name of Julien Brionne</title>
+    <meta name="author" content="Julien Brionne">
+    <meta name="description" content="Akashrine | Personnal Website of Julien Brionne">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Akashrine | Julien Brionne's Website"/>
+    <meta property="og:url" content="http://akashrine.fr"/>
+    <meta property="og:image" content="https://d27kszptu8mqwl.cloudfront.net/dm5weiNk05Ee4mx6HU1yXxs0vb05M_medium.jpg"/>
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="http://akashrine.fr">
+    <meta name="twitter:title" content="Akashrine | Personnal Website of Julien Brionne : Front End Developper">
+    <link rel="author" href="https://plus.google.com//u/0/104018593171009461571"/>
     <link rel="stylesheet" href="css/main.min.css">
   </head>
   <body>
     <!-- Add your site or application content here -->
-    <p>Hello world! This is Minimal.</p>
-
-    <script src="js/app.min.js"></script>
-  </body>
+    <header role="introduction">
+      <div class="container">
+        <h1 class="baseline">Hi, I'm Julien Brionne. Front End and UI team manager focused on Usability and Clean design. </h1>
+        <nav>
+          <ul>
+            <li><a href="#work">Some dribbble</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#social">Elsewhere</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <section class="work" role="work">
+      
+    </section>
+    <section role="about" class="about">
+      <h3 class="sc small-title">about</h3>
+      <figure class="avatar blog_home">
+        <a href="http://akashrine.fr">Julien Brionne --</a>
+      </figure>
+      <p class="about-heading">Hi there ! my name's <strong>Julien Brionne</strong>, I'm living in Paris and I'm working as a Front end team manager at <a href="http://the-other-store.fr" title="The Other Store">The Other Store</a>.</p>
+      <p>Working with <abbr title="HyperText Markup Language">HTML5</abbr>, <abbr title="Cascading Style Sheet">CSS3</abbr>, I've pushed my interesting further (liquid, sass/compass, handlebars). I'm really into automation with <a href="http://gruntjs.com/">Grunt</a> and i've fallen in love with <a href="http://yeoman.io/">yeoman</a>. </p>
+      <p class="about">
+        When I'm not working, I'm really into <a href="http://headbang.fr" title="Headbang.fr">Music</a> essentially Metal and Post Rock stuff, and I love Design.
+      </p>
+    </section>
+    <section role="about-social" class="social">
+      <h3 class="sc small-title">social</h3>
+      <ul class="social">
+        <li>
+          <a href="{{site.social.twitter}}">
+          <svg id="twitter" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 25px; width: 25px;opacity: 1; fill: rgb(68, 68, 68);"><path class="inner-shape"  transform="translate(0,0) scale(1)" d="M99.001,19.428c-3.606,1.608-7.48,2.695-11.547,3.184c4.15-2.503,7.338-6.466,8.841-11.189 c-3.885,2.318-8.187,4-12.768,4.908c-3.667-3.931-8.893-6.387-14.676-6.387c-11.104,0-20.107,9.054-20.107,20.223 c0,1.585,0.177,3.128,0.52,4.609c-16.71-0.845-31.525-8.895-41.442-21.131C6.092,16.633,5.1,20.107,5.1,23.813 c0,7.017,3.55,13.208,8.945,16.834c-3.296-0.104-6.397-1.014-9.106-2.529c-0.002,0.085-0.002,0.17-0.002,0.255 c0,9.799,6.931,17.972,16.129,19.831c-1.688,0.463-3.463,0.71-5.297,0.71c-1.296,0-2.555-0.127-3.783-0.363 c2.559,8.034,9.984,13.882,18.782,14.045c-6.881,5.424-15.551,8.657-24.971,8.657c-1.623,0-3.223-0.096-4.796-0.282 c8.898,5.738,19.467,9.087,30.82,9.087c36.982,0,57.206-30.817,57.206-57.543c0-0.877-0.02-1.748-0.059-2.617 C92.896,27.045,96.305,23.482,99.001,19.428z"></path></svg>
+        </a>
+      </li>
+      <li>
+        <a href="{{site.social.dribbble}}">
+        <svg id="dribble" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 25px; width: 25px;opacity: 1; fill: rgb(68, 68, 68);"><path class="inner-shape" transform="translate(0,0) scale(1)" d="M74.277,22.662c-0.659,0.938-6.171,8.349-19.194,13.229C49.082,24.865,42.43,15.808,41.417,14.452 c2.754-0.663,5.627-1.018,8.582-1.018C59.304,13.434,67.809,16.925,74.277,22.662L74.277,22.662z M52.56,50.375 c-18.888,6.105-28.938,22.747-29.768,24.167c-5.849-6.493-9.415-15.08-9.415-24.486c0-0.374,0.008-0.748,0.019-1.119 c1.602,0.032,19.349,0.262,37.638-5.212c1.049,2.052,2.049,4.135,2.969,6.215C53.518,50.076,53.037,50.221,52.56,50.375z M50,1 C22.938,1,1,22.938,1,50s21.938,49,49,49s49-21.938,49-49S77.062,1,50,1z M50,92.875C26.358,92.875,7.125,73.642,7.125,50 S26.358,7.125,50,7.125S92.875,26.358,92.875,50S73.642,92.875,50,92.875z M60.328,46.641c-0.76-1.786-1.578-3.56-2.429-5.305 c13.541-5.528,19.677-13.395,20.45-14.439c5.1,6.232,8.189,14.169,8.27,22.813c-1.207-0.256-13.315-2.711-25.501-1.179 C60.861,47.904,60.599,47.274,60.328,46.641L60.328,46.641z M48.009,38.093c-17.13,4.549-32.218,4.484-33.856,4.462 c2.375-11.364,10.033-20.809,20.279-25.642C35.397,18.237,41.941,27.306,48.009,38.093L48.009,38.093z M56.251,56.077 c0.08-0.028,0.161-0.054,0.241-0.081c5.141,13.36,7.268,24.559,7.813,27.771C59.908,85.64,55.072,86.677,50,86.677 c-8.466,0-16.27-2.889-22.479-7.731C28.179,77.599,35.595,63.274,56.251,56.077L56.251,56.077z M63.348,54.303 c11.477-1.837,21.559,1.171,22.811,1.566c-1.633,10.19-7.481,18.99-15.698,24.545C70.086,78.187,68.137,67.467,63.348,54.303 L63.348,54.303z"></path></svg>
+      </a>
+    </li>
+    <li>
+      <a href="{{site.social.facebook}}">
+      <svg id="facebook-square" class="custom-icon" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 100 100" style="height: 25px; width: 25px;opacity: 1; fill: rgb(68, 68, 68);"><path class="inner-shape" transform="translate(0,0) scale(1)" d="M82.667,1H17.335C8.351,1,1,8.351,1,17.336v65.329c0,8.99,7.351,16.335,16.334,16.335h65.332 C91.652,99.001,99,91.655,99,82.665V17.337C99,8.353,91.652,1.001,82.667,1L82.667,1z M84.318,50H68.375v42.875H50V50h-8.855V35.973 H50v-9.11c0-12.378,5.339-19.739,19.894-19.739h16.772V22.3H72.967c-4.066-0.007-4.57,2.12-4.57,6.078l-0.023,7.594H86.75 l-2.431,14.027V50z"></path></svg>
+    </a>
+  </li>
+  <li>
+    <a href="{{site.social.github}}">
+      <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        width="25px" height="25px" viewBox="0 0 90 90" style="opacity: 1; fill: rgb(68, 68, 68);" xml:space="preserve">
+        <path id="Github__x28_alt_x29_" d="M65.709,10.5c1.17,2.657,1.928,7.07,0.797,10.301c4.625,3.949,6.215,13.549,3.982,21.394
+          C77.08,42.698,84.932,41.953,90,43.976c-4.738-0.609-11.209-1.804-17.32-1.388c-1.158,0.079-2.873-0.044-2.789,1.585
+          c7.074,0.555,14.104,1.16,19.912,2.973c-5.761-0.941-12.754-2.375-19.912-2.574c-2.957,5.835-8.908,8.703-17.123,9.307
+          c0.883,1.922,2.574,2.653,2.987,5.744c0.616,4.618-0.964,11.381,0.595,14.459c0.748,1.475,1.967,1.514,2.789,2.775
+          c-2.012,2.381-7-0.268-7.568-2.775c-0.973-4.295,1.482-10.953-1.192-13.865c0.188,4.685-1.108,11.264,0.199,15.449
+          c0.515,1.646,2.002,2.281,1.593,3.766c-9.352,0.949-5.443-12.104-6.972-19.81c-1.411,0.101-0.791,2.113-0.796,2.972
+          c-0.04,7.524,1.54,17.844-6.57,16.838c-0.237-1.582,1.088-2.119,1.593-3.563c1.479-4.233-0.277-10.542,0.401-15.651
+          c-3.095,2.334,0.325,10.48-1.593,14.657c-1.105,2.404-4.666,3.45-7.367,2.377c0.352-1.79,2.2-1.501,2.984-3.169
+          c1.096-2.324,0.008-5.674,0.399-9.111c-5.729,1.144-10.173-0.166-12.348-3.764c-0.973-1.615-1.214-3.52-2.39-4.951
+          c-1.17-1.432-3.04-1.625-3.582-3.563c7.095-1.708,7.367,7.302,13.739,7.524c1.954,0.071,2.97-0.563,4.778-0.988
+          c0.506-2.272,1.589-3.967,3.186-5.153c-7.929-1.085-14.477-3.554-17.522-9.504c-7.208,0.354-13.804,1.317-19.913,2.771
+          c5.545-2.014,12.384-2.736,19.715-2.973c-0.432-2.596-4.219-1.882-6.57-1.782C8.973,42.781,3.473,43.324,0,43.976
+          c5.034-1.795,12.098-1.571,18.918-1.585c-2.086-6.54-1.363-16.929,3.186-20.798C20.815,18.344,21.215,13.03,22.9,10.5
+          c5.079,0.228,8.159,2.443,11.35,4.557c3.957-1.125,8.118-1.685,13.54-1.387c2.28,0.126,4.651,1.151,6.369,0.989
+        c1.685-0.158,3.542-2.049,5.178-2.771C61.468,10.947,63.271,10.588,65.709,10.5z"/></path></svg>
+      </a>
+    </li>
+  </ul>
+</section>
+<footer role="footer"></footer>
+<!--[if lt IE 7]>
+<p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+<![endif]-->
+<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+<script>
+var _gaq=[['_setAccount','UA-3248722-2'],['_trackPageview']];
+(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+g.src='//www.google-analytics.com/ga.js';
+s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+<script src="js/app.min.js"></script>
+</body>
 </html>
