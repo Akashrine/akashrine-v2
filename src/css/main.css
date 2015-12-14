@@ -449,7 +449,7 @@ header {
       display: block;
       content: '';
       width: 35rem;
-      height: 3px;
+      height: 0.5rem;
       background: #cfd8dc;
       position: relative;
       margin: 3rem 0; }
@@ -473,6 +473,8 @@ header {
                 transition: all .25s ease-out; }
         header nav ul li a:first-child {
           padding-left: 0; }
+        header nav ul li a:hover {
+          color: #e57373; }
 
 .social, .about, .work {
   max-width: 80vw;
