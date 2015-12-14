@@ -17,11 +17,11 @@ $black : #1e1e1e;
 /*----------  Typography  ----------*/
 
 $base-font-size : 16px;
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Quattrocento);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Cardo);
 
-$sans-serif : 'Open Sans', sans-serif;
-$serif : 'Quattrocento', serif;
+$sans-serif : 'Roboto', sans-serif;
+$serif : 'Cardo', serif;
 
 $heading : $serif;
 $paragrah : $sans-serif;

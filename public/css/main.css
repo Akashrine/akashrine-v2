@@ -7,8 +7,8 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Quattrocento);
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Cardo);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -386,8 +386,8 @@ html {
 body {
   background: #cfd8dc;
   color: #485563;
-  font: 16px "Open Sans", sans-serif;
-  text-align: center;
+  font: 16px "Roboto", sans-serif;
+  text-align: left;
   text-rendering: geometricPrecision;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
@@ -396,14 +396,14 @@ body {
 h1 {
   font-size: 2rem;
   color: #cfd8dc;
-  font-family: "Quattrocento", serif; }
+  font-family: "Cardo", serif; }
 
 p:not(:first-child) {
   text-indent: 1.7rem; }
 
 p a {
   color: #e57373;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
   font-style: italic;
   text-decoration: none;
   border-bottom: 1px solid #e57373;
@@ -431,14 +431,28 @@ header {
     margin: 0 auto;
     max-width: 70rem;
     padding: 5rem 2rem; }
+  header h1 {
+    font-size: 1em;
+    font-weight: normal;
+    padding-bottom: 3rem;
+    font-family: "Roboto", sans-serif; }
   header .baseline {
     font-weight: lighter;
-    font-style: italic;
-    font-size: 2.6rem;
+    font-size: 3.2rem;
     line-height: 1.4;
     margin: 0 auto;
     -webkit-transition: all .5s ease-out;
-            transition: all .5s ease-out; }
+            transition: all .5s ease-out;
+    font-family: "Cardo", serif;
+    color: #e57373; }
+    header .baseline:after {
+      display: block;
+      content: '';
+      width: 35rem;
+      height: 3px;
+      background: #cfd8dc;
+      position: relative;
+      margin: 3rem 0; }
   header nav ul {
     list-style: none;
     margin: 0;
@@ -448,7 +462,8 @@ header {
       padding: 1.25rem 0;
       text-transform: uppercase;
       font-size: 1.25rem;
-      font-weight: bold; }
+      font-weight: bold;
+      margin: 0; }
       header nav ul li a {
         padding: 1.25rem;
         color: #fff;
@@ -456,6 +471,8 @@ header {
         text-decoration: none;
         -webkit-transition: all .25s ease-out;
                 transition: all .25s ease-out; }
+        header nav ul li a:first-child {
+          padding-left: 0; }
 
 .social, .about, .work {
   max-width: 80vw;
