@@ -376,6 +376,9 @@ th {
      .class-name { color: red; }
    }
  */
+/*==============================
+=            Mixins            =
+==============================*/
 *, *:before, *:after {
   -webkit-box-sizing: border-box;
           box-sizing: border-box; }
@@ -412,6 +415,18 @@ p a {
 /* =============================================================================
   Layout
   ============================================================================ */
+@-webkit-keyframes slowOpac {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes slowOpac {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
 header {
   height: 92vh;
   width: 100%;
@@ -441,10 +456,10 @@ header {
     font-size: 3.2rem;
     line-height: 1.4;
     margin: 0 auto;
-    -webkit-transition: all .5s ease-out;
-            transition: all .5s ease-out;
     font-family: "Cardo", serif;
-    color: #e57373; }
+    color: #e57373;
+    -webkit-animation: slowOpac ease-out 1s;
+    animation: slowOpac ease-out 1s; }
     header .baseline:after {
       display: block;
       content: '';
@@ -453,28 +468,53 @@ header {
       background: #cfd8dc;
       position: relative;
       margin: 3rem 0; }
-  header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0; }
-    header nav ul li {
-      display: inline-block;
-      padding: 1.25rem 0;
-      text-transform: uppercase;
-      font-size: 1.25rem;
-      font-weight: bold;
-      margin: 0; }
-      header nav ul li a {
-        padding: 1.25rem;
-        color: #fff;
-        opacity: .6;
-        text-decoration: none;
-        -webkit-transition: all .25s ease-out;
-                transition: all .25s ease-out; }
-        header nav ul li a:first-child {
-          padding-left: 0; }
-        header nav ul li a:hover {
-          color: #e57373; }
+  header nav {
+    -webkit-animation: slowOpac ease-out 2s;
+    animation: slowOpac ease-out 2s; }
+    header nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      header nav ul li {
+        display: inline-block;
+        padding: 1.25rem 0;
+        text-transform: uppercase;
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin: 0; }
+        header nav ul li a {
+          padding: 1.25rem;
+          color: #fff;
+          opacity: .6;
+          text-decoration: none;
+          -webkit-transition: all .25s ease-out;
+                  transition: all .25s ease-out;
+          position: relative; }
+          header nav ul li a::after {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 50%;
+            height: 1px;
+            background: #e57373;
+            content: '';
+            opacity: 0;
+            -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
+            transition: height 0.3s, opacity 0.3s, transform 0.3s;
+            -webkit-transform: translateY(-10px);
+            -ms-transform: translateY(-10px);
+                transform: translateY(-10px); }
+          header nav ul li a:first-child {
+            padding-left: 0; }
+          header nav ul li a:hover, header nav ul li a:focus {
+            color: #e57373;
+            outline: none; }
+            header nav ul li a:hover::after, header nav ul li a:focus::after {
+              height: 0.25rem;
+              opacity: 1;
+              -webkit-transform: translateY(0px);
+              -ms-transform: translateY(0px);
+                  transform: translateY(0px); }
 
 .social, .about, .work {
   max-width: 80vw;
