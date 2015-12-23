@@ -1,0 +1,30 @@
+{
+  "name": "akashrine",
+  "description": "Minimal template for building responsive prototypes with html5 and sass.",
+  "main": "",
+  "authors": [
+    "Akashrine"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "html5",
+    "css",
+    "readability",
+    "responsive",
+    "design",
+    "rwd",
+    "sass"
+  ],
+  "homepage": "https://github.com/Akashrine/akashrine-v2",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4"
+  }
+}

@@ -18,6 +18,7 @@ body {
     background: $white;
     color: $bg-left;
     font: $base-font-size $sans-serif;
+    font-size: calc(0.6vw + 12px);
     text-align: left;
     text-rendering: geometricPrecision;
     -ms-text-size-adjust: 100%;
@@ -25,15 +26,42 @@ body {
 }
 
 /*----------  TYPE  ----------*/
+h1, h2, h3, h4, h5, blockquote, .h1, .h2.h3, .h4 {
+    font-family: $serif;
+}
 
-h1 {
-    font-size: 2rem;
+h1, .h1 {
+    font-size: calc(4em - 1rem);
+    line-height: 1;
+    margin-bottom: 2rem;
     color: $white;
     font-family: $serif;
 }
 
+h2, .h2 {
+    font-size: calc(3em - 1rem);
+}
+
+h3, .h3 {
+    font-size: calc(2em - 1rem);
+}
+
 p:not(:first-child) {
     text-indent: 1.7rem;
+}
+
+p {
+    font-size: calc(1.3em - 1rem);
+}
+
+p.pullquote, blockquote {
+    font-size: 1.1em;
+    margin-bottom: 1em;
+    padding-left: 1.5em;
+    border-width: 0px 0px 0px 3px;
+    border-style: solid;
+    font-weight: 700;
+    margin-left: -1.5em;
 }
 
 p a {
@@ -45,14 +73,25 @@ p a {
     padding-bottom: 0.25rem;
 }
 
+.sc {
+    font-variant: small-caps;
+}
+
 /* =============================================================================
   Layout
   ============================================================================ */
 
 @include keyframes(slowOpac) {
-  0%   { opacity: 0; }
-  100% { opacity: 1; }
-}  
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
 header {
     height: 92vh;
     width: 100%;
@@ -62,17 +101,20 @@ header {
     -webkit-align-items: center;
     align-items: center;
     z-index: 2;
+
     .container {
         margin: 0 auto;
         max-width: 70rem;
         padding: 5rem 2rem;
     }
+
     h1 {
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: normal;
         padding-bottom: 3rem;
         font-family: $sans-serif;
     }
+
     .baseline {
         font-weight: lighter;
         font-size: 3.2rem;
@@ -80,7 +122,9 @@ header {
         margin: 0 auto;
         font-family: $serif;
         color: $brand;
-        @include animation('slowOpac ease-out 1s');
+
+        @include animation("slowOpac ease-out 1s");
+
         &:after {
             display: block;
             content: '';
@@ -91,12 +135,15 @@ header {
             margin: 3rem 0;
         }
     }
+
     nav {
-        @include animation('slowOpac ease-out 2s');
+        @include animation("slowOpac ease-out 2s");
+
         ul {
             list-style: none;
             margin: 0;
             padding: 0;
+
             li {
                 display: inline-block;
                 padding: 1.25rem 0;
@@ -104,6 +151,7 @@ header {
                 font-size: 1.25rem;
                 font-weight: bold;
                 margin: 0;
+
                 a {
                     padding: 1.25rem;
                     color: #fff;
@@ -111,6 +159,7 @@ header {
                     text-decoration: none;
                     transition: all .25s ease-out;
                     position: relative;
+
                     &::after {
                         position: absolute;
                         top: 100%;
@@ -127,12 +176,15 @@ header {
                         -moz-transform: translateY(-10px);
                         transform: translateY(-10px);
                     }
+
                     &:first-child {
                         padding-left: 0;
                     }
+
                     &:hover, &:focus {
                         color: $brand;
                         outline: none;
+
                         &::after {
                             height: 0.25rem;
                             opacity: 1;
@@ -147,9 +199,48 @@ header {
     }
 }
 
-.social, .about, .work {
-    max-width: 80vw;
+.social, .about {
+    max-width: 50vw;
     margin-right: auto;
     margin-left: auto;
     padding: 2rem;
+}
+
+.work {
+    background-image: linear-gradient(to right, $bg-left, $bg-right);
+    padding: 5rem;
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            width: 25%;
+
+            @include break(medium) {
+                width: 50%;
+            }
+
+
+            @include break(small) {
+                width: 100%;
+            }
+
+
+            img {
+                width: 100%;
+                opacity: 0.9;
+                -webkit-transition: opacity 0.35s;
+                transition: opacity 0.35s;
+            }
+
+            &:hover {
+                img {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
 }

@@ -390,19 +390,48 @@ body {
   background: #cfd8dc;
   color: #485563;
   font: 16px "Roboto", sans-serif;
+  font-size: -webkit-calc(0.6vw + 12px);
+  font-size: calc(0.6vw + 12px);
   text-align: left;
   text-rendering: geometricPrecision;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
 /*----------  TYPE  ----------*/
-h1 {
-  font-size: 2rem;
+h1, h2, h3, h4, h5, blockquote, .h1, .h2.h3, .h4 {
+  font-family: "Cardo", serif; }
+
+h1, .h1 {
+  font-size: -webkit-calc(4em - 1rem);
+  font-size: calc(4em - 1rem);
+  line-height: 1;
+  margin-bottom: 2rem;
   color: #cfd8dc;
   font-family: "Cardo", serif; }
 
+h2, .h2 {
+  font-size: -webkit-calc(3em - 1rem);
+  font-size: calc(3em - 1rem); }
+
+h3, .h3 {
+  font-size: -webkit-calc(2em - 1rem);
+  font-size: calc(2em - 1rem); }
+
 p:not(:first-child) {
   text-indent: 1.7rem; }
+
+p {
+  font-size: -webkit-calc(1.3em - 1rem);
+  font-size: calc(1.3em - 1rem); }
+
+p.pullquote, blockquote {
+  font-size: 1.1em;
+  margin-bottom: 1em;
+  padding-left: 1.5em;
+  border-width: 0px 0px 0px 3px;
+  border-style: solid;
+  font-weight: 700;
+  margin-left: -1.5em; }
 
 p a {
   color: #e57373;
@@ -411,6 +440,9 @@ p a {
   text-decoration: none;
   border-bottom: 1px solid #e57373;
   padding-bottom: 0.25rem; }
+
+.sc {
+  font-variant: small-caps; }
 
 /* =============================================================================
   Layout
@@ -447,7 +479,7 @@ header {
     max-width: 70rem;
     padding: 5rem 2rem; }
   header h1 {
-    font-size: 1em;
+    font-size: 0.8em;
     font-weight: normal;
     padding-bottom: 3rem;
     font-family: "Roboto", sans-serif; }
@@ -516,8 +548,34 @@ header {
               -ms-transform: translateY(0px);
                   transform: translateY(0px); }
 
-.social, .about, .work {
-  max-width: 80vw;
+.social, .about {
+  max-width: 50vw;
   margin-right: auto;
   margin-left: auto;
   padding: 2rem; }
+
+.work {
+  background-image: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
+  background-image: -webkit-linear-gradient(left, #485563, #29323c);
+  background-image: linear-gradient(to right, #485563, #29323c);
+  padding: 5rem; }
+  .work ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    .work ul li {
+      display: inline-block;
+      width: 25%; }
+      .work ul li img {
+        width: 100%;
+        opacity: 0.9;
+        -webkit-transition: opacity 0.35s;
+        transition: opacity 0.35s; }
+      .work ul li:hover img {
+        opacity: 0.7; }
+      @media screen and (min-width: 48em) and (max-width: 64em){
+  .work ul li{
+    width: 50%; } }
+      @media (max-width: 38em){
+  .work ul li{
+    width: 100%; } }
