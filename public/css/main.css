@@ -395,7 +395,9 @@ body {
   text-align: left;
   text-rendering: geometricPrecision;
   -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0; }
 
 /*----------  TYPE  ----------*/
 h1, h2, h3, h4, h5, blockquote, .h1, .h2.h3, .h4 {
@@ -555,27 +557,76 @@ header {
   padding: 2rem; }
 
 .work {
-  background-image: -webkit-gradient(linear, left top, right top, from(#485563), to(#29323c));
-  background-image: -webkit-linear-gradient(left, #485563, #29323c);
-  background-image: linear-gradient(to right, #485563, #29323c);
-  padding: 5rem; }
-  .work ul {
-    list-style: none;
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+  word-spacing: -2em; }
+  .work figure {
+    display: inline-block;
+    width: 25%;
+    word-spacing: normal;
     margin: 0;
     padding: 0; }
-    .work ul li {
-      display: inline-block;
-      width: 25%; }
-      .work ul li img {
-        width: 100%;
-        opacity: 0.9;
-        -webkit-transition: opacity 0.35s;
-        transition: opacity 0.35s; }
-      .work ul li:hover img {
-        opacity: 0.7; }
-      @media screen and (min-width: 48em) and (max-width: 64em){
-  .work ul li{
-    width: 50%; } }
-      @media (max-width: 38em){
-  .work ul li{
-    width: 100%; } }
+    .work figure img {
+      width: 100%;
+      max-width: 100%; }
+  .work figure.oscar {
+    background-image: -webkit-linear-gradient(45deg, #485563 0%, #29323c 100%);
+    background-image: linear-gradient(45deg, #485563 0%, #29323c 100%);
+    position: relative;
+    overflow: hidden; }
+    .work figure.oscar img {
+      opacity: 0.9;
+      -webkit-transition: opacity 0.35s;
+      transition: opacity 0.35s; }
+    .work figure.oscar figcaption {
+      padding: 2rem;
+      background-color: #485563;
+      opacity: 0.95;
+      -webkit-transition: background-color 0.35s;
+      transition: background-color 0.35s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      color: #cfd8dc; }
+      .work figure.oscar figcaption::before {
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        bottom: 2rem;
+        left: 2rem;
+        border: 1px solid #cfd8dc;
+        content: ''; }
+    .work figure.oscar h2 {
+      margin: 20% 0 10px 0;
+      -webkit-transition: -webkit-transform 0.35s;
+      transition: transform 0.35s;
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+      color: #cfd8dc;
+      font-size: 3rem;
+      padding-left: 2rem; }
+      .work figure.oscar h2 span {
+        font-weight: lighter; }
+    .work figure.oscar figcaption::before, .work figure.oscar p {
+      opacity: 0;
+      -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+      transition: opacity 0.35s, transform 0.35s;
+      -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0);
+      color: #cfd8dc; }
+    .work figure.oscar:hover h2 {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+    .work figure.oscar:hover figcaption::before, .work figure.oscar:hover p {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1); }
+    .work figure.oscar:hover figcaption {
+      background-color: rgba(58, 52, 42, 0); }
+    .work figure.oscar:hover img {
+      opacity: 0.6; }
