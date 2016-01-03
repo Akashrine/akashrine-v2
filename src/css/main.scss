@@ -12,19 +12,22 @@
 
 html {
     font-size: 62.5%;
+    height: 100%;
 }
 
 body {
     background: $white;
     color: $bg-left;
     font: $base-font-size $sans-serif;
-    font-size: calc(0.6vw + 12px);
+    font-size: 1.8rem;
     text-align: left;
     text-rendering: geometricPrecision;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
     margin: 0;
     padding: 0;
+    height: 100%;
+    display:table;
 }
 
 /*----------  TYPE  ----------*/
@@ -33,7 +36,7 @@ h1, h2, h3, h4, h5, blockquote, .h1, .h2.h3, .h4 {
 }
 
 h1, .h1 {
-    font-size: calc(4em - 1rem);
+    font-size: 3rem;
     line-height: 1;
     margin-bottom: 2rem;
     color: $white;
@@ -41,15 +44,11 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: calc(3em - 1rem);
+    font-size: 2.5rem;
 }
 
 h3, .h3 {
-    font-size: calc(2em - 1rem);
-}
-
-p:not(:first-child) {
-    text-indent: 1.7rem;
+    font-size: 1.8rem;
 }
 
 p.pullquote, blockquote {
@@ -260,30 +259,54 @@ header {
     }
 }
 
-.social, .about {
-    width:100%;
+.about {
+    width: 100%;
     max-width: 70rem;
     margin-right: auto;
     margin-left: auto;
     padding: 2rem;
+    figure {
+        background-image: url("https://d27kszptu8mqwl.cloudfront.net/dm5weiNk05Ee4mx6HU1yXxs0vb05M_medium.jpg");
+        margin: 4em auto;
+        padding: 0;
+        width: 150px;
+        height: 150px;
+        border: 0.5rem solid #fff;
+        border-radius: 100%;
+        background-size: 100%;
+        a {
+            display: block;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            width: 95px;
+            height: 95px;
+            text-indent: -9999px;
+            border-radius: 100%;
+            background-size: 100%;
+        }
+    }
 }
-
 .work {
     display: table;
     width: 100%;
     table-layout: fixed;
     word-spacing: -2em;
+    @include cf();
     figure {
-        display: inline-block;
-        width: 25%;
+        display: block;
         word-spacing: normal;
         margin: 0;
         padding: 0;
-        @include break(small){
-            width:100%;
+        width: 50%;
+        float: left;
+        @include break(not-small) {
+            width: 25%;
+            display: inline-block;
         }
-        @include break(medium){
-            width:50%;
+        @include break(small){
+            display: block;
+            width:100%;
         }
         img {
             width: 100%;
@@ -328,10 +351,9 @@ header {
             -webkit-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0);
             color: $white;
-            font-size: 3rem;
-            padding-left: 2rem;
+            padding-left: 0rem;
             span {
-                font-weight: lighter;
+                font-style:italic;
             }
         }
         figcaption::before, p {
@@ -341,11 +363,12 @@ header {
             -webkit-transform: scale(0);
             transform: scale(0);
             color: $white;
+            padding-left: 2rem;
         }
         &:hover {
             h2 {
-                -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
+                -webkit-transform: translate3d(5%, 0, 0);
+                transform: translate3d(5%, 0, 0);
             }
             figcaption::before, p {
                 opacity: 1;
@@ -357,6 +380,32 @@ header {
             }
             img {
                 opacity: 0.6;
+            }
+        }
+    }
+}
+footer{
+    background:$bg-left;
+    padding: 4rem 0;
+    margin-top: 4rem;
+    .social{
+        width: 100%;
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+    ul{
+        list-style: none;
+        margin: 0 auto;
+        padding: 0 2rem;
+        text-align: center;
+        li{
+            display: inline-block;
+            margin: 0 4rem;
+        }
+        svg>path{
+            fill: $bg-right;
+            &:hover{
+                fill:$brand;
             }
         }
     }
