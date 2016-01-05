@@ -27,7 +27,7 @@ body {
     margin: 0;
     padding: 0;
     height: 100%;
-    display:table;
+    display: table;
 }
 
 /*----------  TYPE  ----------*/
@@ -85,11 +85,13 @@ p a {
     position: relative;
     line-height: 1;
     display: inline-block;
+
     &:hover {
         -webkit-transition: none;
         transition: none;
         color: transparent;
     }
+
     &::before {
         content: '';
         width: 100%;
@@ -106,10 +108,12 @@ p a {
         -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
         transition-timing-function: cubic-bezier(0.7, 0, 0.3, 1);
     }
+
     &:hover::before {
         -webkit-transform: translate3d(100%, 0, 0);
         transform: translate3d(100%, 0, 0);
     }
+
     span {
         position: absolute;
         height: 50%;
@@ -117,6 +121,7 @@ p a {
         left: 0;
         top: 0;
         overflow: hidden;
+
         &::before {
             content: attr(data-letters);
             color: red;
@@ -127,20 +132,24 @@ p a {
             -webkit-transition: -webkit-transform 0.5s;
             transition: transform 0.5s;
         }
+
         &:nth-child(2) {
             top: 50%;
         }
+
         &:first-child::before {
             top: 0;
             -webkit-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0);
         }
+
         &:nth-child(2)::before {
             bottom: 0;
             -webkit-transform: translate3d(0, -100%, 0);
             transform: translate3d(0, -100%, 0);
         }
     }
+
     &:hover span::before {
         -webkit-transition-delay: 0.3s;
         transition-delay: 0.3s;
@@ -159,6 +168,7 @@ p a {
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -174,17 +184,20 @@ header {
     -webkit-align-items: center;
     align-items: center;
     z-index: 2;
+
     .container {
         margin: 0 auto;
         max-width: 70rem;
         padding: 5rem 2rem;
     }
+
     h1 {
         font-size: 1em;
         font-weight: normal;
         padding-bottom: 3rem;
         font-family: $sans-serif;
     }
+
     .baseline {
         font-weight: lighter;
         font-size: 3.2rem;
@@ -192,7 +205,9 @@ header {
         margin: 0 auto;
         font-family: $serif;
         color: $brand;
+
         @include animation("slowOpac ease-out 1s");
+
         &:after {
             display: block;
             content: '';
@@ -203,12 +218,15 @@ header {
             margin: 3rem 0;
         }
     }
+
     nav {
         @include animation("slowOpac ease-out 2s");
+
         ul {
             list-style: none;
             margin: 0;
             padding: 0;
+
             li {
                 display: inline-block;
                 padding: 1.25rem 0;
@@ -216,6 +234,7 @@ header {
                 font-size: 1.25rem;
                 font-weight: bold;
                 margin: 0;
+
                 a {
                     padding: 1.25rem;
                     color: #fff;
@@ -223,6 +242,7 @@ header {
                     text-decoration: none;
                     transition: all .25s ease-out;
                     position: relative;
+
                     &::after {
                         position: absolute;
                         top: 100%;
@@ -239,12 +259,15 @@ header {
                         -moz-transform: translateY(-10px);
                         transform: translateY(-10px);
                     }
+
                     &:first-child {
                         padding-left: 0;
                     }
+
                     &:hover, &:focus {
                         color: $brand;
                         outline: none;
+
                         &::after {
                             height: 0.25rem;
                             opacity: 1;
@@ -265,6 +288,7 @@ header {
     margin-right: auto;
     margin-left: auto;
     padding: 2rem;
+
     figure {
         background-image: url("https://d27kszptu8mqwl.cloudfront.net/dm5weiNk05Ee4mx6HU1yXxs0vb05M_medium.jpg");
         margin: 4em auto;
@@ -274,6 +298,7 @@ header {
         border: 0.5rem solid #fff;
         border-radius: 100%;
         background-size: 100%;
+
         a {
             display: block;
             position: relative;
@@ -287,12 +312,15 @@ header {
         }
     }
 }
+
 .work {
     display: table;
     width: 100%;
     table-layout: fixed;
     word-spacing: -2em;
-    @include cf();
+
+    @include cf;
+
     figure {
         display: block;
         word-spacing: normal;
@@ -300,28 +328,36 @@ header {
         padding: 0;
         width: 50%;
         float: left;
+
         @include break(not-small) {
             width: 25%;
             display: inline-block;
         }
-        @include break(small){
+
+
+        @include break(small) {
             display: block;
-            width:100%;
+            width: 100%;
         }
+
+
         img {
             width: 100%;
             max-width: 100%;
         }
     }
+
     figure.oscar {
         background-image: linear-gradient(45deg, $bg-left 0%, $bg-right 100%);
         position: relative;
         overflow: hidden;
+
         img {
             opacity: 0.9;
             -webkit-transition: opacity 0.35s;
             transition: opacity 0.35s;
         }
+
         figcaption {
             padding: 2rem;
             background-color: $bg-left;
@@ -334,6 +370,7 @@ header {
             width: 100%;
             height: 100%;
             color: $white;
+
             &::before {
                 position: absolute;
                 top: 2rem;
@@ -344,6 +381,7 @@ header {
                 content: '';
             }
         }
+
         h2 {
             margin: 20% 0 10px 0;
             -webkit-transition: -webkit-transform 0.35s;
@@ -352,10 +390,12 @@ header {
             transform: translate3d(0, 100%, 0);
             color: $white;
             padding-left: 0rem;
+
             span {
-                font-style:italic;
+                font-style: italic;
             }
         }
+
         figcaption::before, p {
             opacity: 0;
             -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -365,48 +405,70 @@ header {
             color: $white;
             padding-left: 2rem;
         }
+
         &:hover {
             h2 {
                 -webkit-transform: translate3d(5%, 0, 0);
                 transform: translate3d(5%, 0, 0);
             }
+
             figcaption::before, p {
                 opacity: 1;
                 -webkit-transform: scale(1);
                 transform: scale(1);
             }
+
             figcaption {
                 background-color: rgba(58, 52, 42, 0);
             }
+
             img {
                 opacity: 0.6;
             }
         }
     }
 }
-footer{
-    background:$bg-left;
-    padding: 4rem 0;
+
+footer {
+    background: $true-white;
+    padding: 6rem 0;
     margin-top: 4rem;
-    .social{
+
+    .social {
         width: 100%;
         max-width: 70rem;
         margin: 0 auto;
+        padding: 0 2rem;
     }
-    ul{
+
+    ul {
         list-style: none;
         margin: 0 auto;
-        padding: 0 2rem;
         text-align: center;
-        li{
+
+        li {
             display: inline-block;
-            margin: 0 4rem;
-        }
-        svg>path{
-            fill: $bg-right;
-            &:hover{
-                fill:$brand;
+            margin: 0 2rem;
+
+            a {
+                display: block;
+                padding: 2rem;
+                &:hover {
+                    background: $brand;
+                    svg{
+                        fill:$white;
+                    }
+                }
             }
         }
+
+        svg > path {
+            fill: $grey;
+        }
+    }
+    p{
+        font-size: 1rem;
+        text-align: center;
+        font-weight: bold;
     }
 }

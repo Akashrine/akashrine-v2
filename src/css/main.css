@@ -388,7 +388,7 @@ html {
   height: 100%; }
 
 body {
-  background: #cfd8dc;
+  background: #f2f2f2;
   color: #485563;
   font: 16px "Roboto", sans-serif;
   font-size: 1.8rem;
@@ -409,7 +409,7 @@ h1, .h1 {
   font-size: 3rem;
   line-height: 1;
   margin-bottom: 2rem;
-  color: #cfd8dc;
+  color: #f2f2f2;
   font-family: "Cardo", serif; }
 
 h2, .h2 {
@@ -440,7 +440,7 @@ p a {
 
 .logo--aka {
   font-weight: 800;
-  color: #cfd8dc;
+  color: #f2f2f2;
   -webkit-transition: color 0.5s 0.25s;
   transition: color 0.5s 0.25s;
   overflow: hidden;
@@ -558,7 +558,7 @@ header {
       content: '';
       width: 35rem;
       height: 0.5rem;
-      background: #cfd8dc;
+      background: #f2f2f2;
       position: relative;
       margin: 3rem 0; }
   header nav {
@@ -677,14 +677,14 @@ header {
       left: 0;
       width: 100%;
       height: 100%;
-      color: #cfd8dc; }
+      color: #f2f2f2; }
       .work figure.oscar figcaption::before {
         position: absolute;
         top: 2rem;
         right: 2rem;
         bottom: 2rem;
         left: 2rem;
-        border: 1px solid #cfd8dc;
+        border: 1px solid #f2f2f2;
         content: ''; }
     .work figure.oscar h2 {
       margin: 20% 0 10px 0;
@@ -692,7 +692,7 @@ header {
       transition: transform 0.35s;
       -webkit-transform: translate3d(0, 100%, 0);
       transform: translate3d(0, 100%, 0);
-      color: #cfd8dc;
+      color: #f2f2f2;
       padding-left: 0rem; }
       .work figure.oscar h2 span {
         font-style: italic; }
@@ -703,7 +703,7 @@ header {
       -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
-      color: #cfd8dc;
+      color: #f2f2f2;
       padding-left: 2rem; }
     .work figure.oscar:hover h2 {
       -webkit-transform: translate3d(5%, 0, 0);
@@ -719,30 +719,39 @@ header {
       opacity: 0.6; }
 
 footer {
-  background: #485563;
-  padding: 4rem 0;
+  background: #fafafa;
+  padding: 6rem 0;
   margin-top: 4rem; }
   footer .social {
     width: 100%;
     max-width: 70rem;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0 2rem; }
   footer ul {
     list-style: none;
     margin: 0 auto;
-    padding: 0 2rem;
     text-align: center; }
     footer ul li {
       display: inline-block;
-      margin: 0 4rem; }
+      margin: 0 2rem; }
+      footer ul li a {
+        display: block;
+        padding: 2rem; }
+        footer ul li a:hover {
+          background: #e57373; }
+          footer ul li a:hover svg {
+            fill: #f2f2f2; }
     footer ul svg > path {
-      fill: #29323c; }
-      footer ul svg > path:hover {
-        fill: #e57373; }
-      @media screen and (min-width: 48em){
+      fill: #e5e5e5; }
+  footer p {
+    font-size: 1rem;
+    text-align: center;
+    font-weight: bold; }
+  @media screen and (min-width: 48em){
   .work figure{
     width: 25%;
     display: inline-block; } }
-      @media (max-width: 38em){
+  @media (max-width: 38em){
   .work figure{
     display: block;
     width: 100%; } }
