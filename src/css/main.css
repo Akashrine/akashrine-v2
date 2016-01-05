@@ -746,7 +746,8 @@ footer {
   footer p {
     font-size: 1rem;
     text-align: center;
-    font-weight: bold; }
+    font-weight: bold;
+    color: #e5e5e5; }
   @media screen and (min-width: 48em){
   .work figure{
     width: 25%;
