@@ -7,7 +7,7 @@
  * 2. Prevent iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Raleway);
 @import url(https://fonts.googleapis.com/css?family=Cardo);
 html {
   font-family: sans-serif;
@@ -390,7 +390,7 @@ html {
 body {
   background: #f2f2f2;
   color: #485563;
-  font: 16px "Roboto", sans-serif;
+  font: 16px "Raleway", sans-serif;
   font-size: 1.8rem;
   text-align: left;
   text-rendering: geometricPrecision;
@@ -429,7 +429,7 @@ p.pullquote, blockquote {
 
 p a {
   color: #e57373;
-  font-family: "Roboto", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-style: italic;
   text-decoration: none;
   border-bottom: 1px solid #e57373;
@@ -543,7 +543,7 @@ header {
     font-size: 1em;
     font-weight: normal;
     padding-bottom: 3rem;
-    font-family: "Roboto", sans-serif; }
+    font-family: "Raleway", sans-serif; }
   header .baseline {
     font-weight: lighter;
     font-size: 3.2rem;
